@@ -4,4 +4,5 @@ dist
 *.log
 node_modules
 coverage
+pushProcess.txt
 webpack/webpack-assets.json
