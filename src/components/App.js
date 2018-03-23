@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { injectGlobal, ThemeProvider } from 'styled-components'
 
-import { HomePage, NotFoundPage, DashboardPage, ChatPage } from 'components'
+import { HomePage, NotFoundPage, DashboardPage, ChatPage, AboutPage } from 'components'
 
 import theme from './themes/default'
 
@@ -20,6 +20,7 @@ const App = () => {
           <Route path="/" component={HomePage} exact />
           <Route path="/dashboard" component={DashboardPage} />
           <Route path="/chats/:id" component={ChatPage} />
+          <Route path="/about" component={AboutPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </ThemeProvider>

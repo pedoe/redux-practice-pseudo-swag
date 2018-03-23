@@ -25,13 +25,13 @@ const ButtonBox = styled.div`
   }
 `
 
-const CreateChatButton = styled(({ className, onCreateChat, onLogout }) => (
+const CreateChatButton = styled(({ className, onCreateChat, onLogout, toAbout }) => (
   <ButtonBox>
     <Button className={className} type="button" onClick={onLogout}>Log-out</Button>
     <Gap className={className} />
     <Button className={className} type="button" onClick={onCreateChat}>Create</Button>
     <Gap className={className} />
-    <Button className={className} type="button">About</Button>
+    <Button className={className} type="button" onClick={toAbout}>About</Button>
     <Gap className={className} />
     <Button className={className} type="button">Shops</Button>
   </ButtonBox>))`

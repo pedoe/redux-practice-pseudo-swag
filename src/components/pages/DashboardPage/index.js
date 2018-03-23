@@ -27,6 +27,7 @@ class DashboardPage extends Component {
         }
         self.createChat = self.createChat.bind(self)
         self.logout = self.logout.bind(self)
+        self.toAbout= self.toAbout.bind(self)
     }
     componentDidMount() {
         const self = this
@@ -79,6 +80,12 @@ class DashboardPage extends Component {
             self.props.history.push('/')
         })
     }
+
+		toAbout() {
+			let self = this
+			self.props.history.push('/about')
+		}
+
     render() {
         var self = this
         return ( 
@@ -88,6 +95,7 @@ class DashboardPage extends Component {
 									sideRightMenu={ 
 										<UserCreateChatButton onCreateChat = {self.createChat } 
 																					onLogout = { self.logout }
+																					toAbout = {self.toAbout}
 										/>
 									} 
 								/>
